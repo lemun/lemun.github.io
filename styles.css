@@ -1,0 +1,383 @@
+* {
+  font-family: sans-serif;
+  font-weight: 300;
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+strong {
+  font-weight: 700;
+}
+
+a {
+  color: #434248;
+  font-weight: 400;
+}
+
+dl {
+  margin: 0;
+  margin-bottom: -0.5rem;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+li {
+  padding: 0;
+}
+
+.layout {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+}
+
+.sidebar {
+  background-color: #434248;
+  color: #ffffff;
+  padding: 1rem;
+
+  flex: 1 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  overflow-y: auto;
+}
+
+.sidebar-header {
+  font-weight: 400;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.sidebar a {
+  color: #c4dcf7;
+  text-decoration: none;
+  font-weight: 100;
+}
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+.oss-projects {
+  flex: 0 1 auto;
+  justify-content: flex-end;
+  overflow: auto;
+}
+
+.oss-projects dd {
+  font-size: 0.8rem;
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.certifications {
+  margin-bottom: 2rem;
+}
+
+.certification-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.certification-list li {
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+  padding-left: 0;
+}
+
+.main {
+  flex: 0 1 65vw;
+
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.header {
+  flex: 0 0 auto;
+  display: flex;
+  gap: 1ch;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #eee;
+  padding: 0.5rem;
+}
+
+.header-name-and-title {
+  flex: 1;
+}
+
+.header-summary {
+  text-align: right;
+  font-style: italic;
+}
+
+.header-contact {
+  display: none;
+  font-size: 0.9rem;
+}
+
+.header-contact .icon {
+  color: #000;
+}
+
+.header-contact-list {
+  padding: 0;
+}
+.header-contact-list li {
+  margin-bottom: 0.25em;
+  white-space: nowrap;
+}
+.header-contact-list li,
+.header-contact-list li a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+.header-contact-list li:last-of-type {
+  margin-bottom: 0;
+}
+
+.header-contact a {
+  text-decoration: none;
+}
+.header-contact a:hover {
+  text-decoration: underline;
+}
+
+.download-link {
+  color: #53515c;
+  text-decoration: none;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.125rem;
+}
+.download-link:hover {
+  color: #434248;
+  text-decoration: underline;
+}
+
+.download-icon {
+  width: 1rem;
+  height: 1rem;
+  fill: currentColor;
+}
+
+.profile-image {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 2.5rem;
+}
+
+.header-name {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-grow: 1;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  white-space: nowrap;
+}
+.header-title {
+  font-size: 1.25rem;
+  white-space: nowrap;
+}
+
+.experience {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.experience-list {
+  flex: 1 0 auto;
+}
+
+.sidebar-contact {
+  flex: 0 0 auto;
+}
+
+.technical-skills,
+.key-projects {
+  flex: 0 0 auto;
+}
+
+.technical-skills dd,
+.key-projects dd {
+  font-size: 0.8rem;
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.sidebar-contact .icon {
+  color: #fff;
+}
+
+.sidebar-contact-list {
+  background-color: #53515c;
+  padding: 0.5rem;
+}
+.sidebar-contact-list {
+  border-radius: 0.25rem;
+}
+.sidebar-contact-list li {
+  margin-bottom: 0.25rem;
+  white-space: nowrap;
+}
+.sidebar-contact-list li,
+.sidebar-contact-list li a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+.sidebar-contact-list li:last-of-type {
+  margin-bottom: 0;
+}
+
+.experience-position {
+  margin-bottom: 0.25rem;
+  padding: 0.25rem 0.75rem;
+  border-bottom: 1px solid #eee;
+}
+.experience-position:last-of-type {
+  border-bottom: none;
+}
+
+.experience-header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.experience-company {
+  font-weight: 400;
+  font-size: 1.25rem;
+  margin-right: 0.5rem;
+}
+
+.experience-company a {
+  text-decoration: none;
+}
+.experience-company a:hover {
+  text-decoration: underline;
+}
+
+.experience-title {
+  flex: 1;
+}
+
+.sub-list {
+  list-style: circle;
+  padding-left: 1rem;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  line-height: 1.15rem;
+}
+
+.education {
+  flex: 0 0 auto;
+  background-color: #eee;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+}
+.education-title {
+  font-weight: 400;
+  font-size: 1.25rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.education-degree {
+  font-size: 1rem;
+}
+
+.education .education-list {
+  margin: 0;
+  padding: 0;
+  list-style: circle;
+  padding-left: 1rem;
+  margin-left: 1rem;
+}
+
+.education .certification-list li {
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+  line-height: 1.15rem;
+}
+
+@media (max-width: 925px) {
+  .header-summary {
+    display: none;
+  }
+}
+
+@media (max-width: 725px) {
+  .layout {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .main,
+  .experience,
+  .sidebar {
+    height: auto;
+    flex: 0 0 auto;
+  }
+
+  .header-contact {
+    display: block;
+  }
+
+  .download-link,
+  .sidebar-contact {
+    display: none;
+  }
+
+  .profile-image {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .header-name {
+    font-size: 1.25rem;
+  }
+
+  .header-title {
+    font-size: 1rem;
+  }
+}
+
+@media print {
+}
