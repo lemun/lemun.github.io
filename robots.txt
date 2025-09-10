@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shaisinai.com/sitemap.xml
+
