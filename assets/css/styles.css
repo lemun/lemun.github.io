@@ -5,7 +5,6 @@
   font-display: swap;
 }
 
-/* Screen reader only content */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -36,6 +35,12 @@ strong {
 a {
   color: #434248;
   font-weight: 400;
+  transition: all 0.3s ease-out;
+  position: relative;
+}
+
+a:hover {
+  transform: translateY(-1px);
 }
 
 dl {
@@ -88,10 +93,35 @@ li {
   color: #c4dcf7;
   text-decoration: none;
   font-weight: 100;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.sidebar a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .sidebar a:hover {
-  text-decoration: underline;
+  background: rgba(196,220,247,0.15);
+  color: #ffffff;
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 4px 20px rgba(196,220,247,0.3);
+  text-decoration: none;
+}
+
+.sidebar a:hover::before {
+  left: 100%;
 }
 
 .main {
@@ -169,6 +199,13 @@ li {
   height: 5rem;
   width: 5rem;
   border-radius: 2.5rem;
+  transition: all 0.4s ease-out;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.profile-image:hover {
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
 }
 
 .header-name {
@@ -312,7 +349,8 @@ li {
 
 @media (max-width: 925px) {
   .header-summary {
-    display: none;
+    text-align: left;
+    margin-top: 0.5rem;
   }
 }
 
@@ -401,5 +439,135 @@ li {
 
   .experience-position {
     margin-bottom: 0.75rem;
+  }
+}
+
+.loading-placeholder {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e8e8e8 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2.5s linear infinite;
+  border-radius: 4px;
+  color: transparent;
+  min-height: 1.2em;
+  will-change: background-position;
+}
+
+@keyframes shimmer {
+  0% { 
+    background-position: -200% 0; 
+  }
+  100% { 
+    background-position: 200% 0; 
+  }
+}
+
+.content-loaded .loading-placeholder {
+  display: none;
+}
+
+.header {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.main {
+  animation: fadeIn 0.8s ease-out 0.1s both;
+}
+
+.sidebar {
+  animation: fadeIn 0.8s ease-out 0.2s both;
+}
+
+.content-loaded .experience-list,
+.content-loaded .education-list,
+.content-loaded .technical-skills dl,
+.content-loaded .key-projects dl,
+.content-loaded .header-summary p {
+  animation: fadeIn 0.4s ease-out;
+}
+
+.experience-position {
+  animation: fadeInUp 0.5s ease-out both;
+}
+
+.experience-position:nth-child(1) { animation-delay: 0.1s; }
+.experience-position:nth-child(2) { animation-delay: 0.2s; }
+.experience-position:nth-child(3) { animation-delay: 0.3s; }
+.experience-position:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header-summary .loading-placeholder {
+  width: 80%;
+  height: 1.5em;
+}
+
+.experience-list .loading-placeholder {
+  width: 100%;
+  height: 4em;
+  margin-bottom: 1rem;
+}
+
+.education-list .loading-placeholder {
+  width: 90%;
+  height: 1.5em;
+}
+
+.technical-skills .loading-placeholder {
+  width: 70%;
+  height: 1.2em;
+}
+
+.key-projects .loading-placeholder {
+  width: 85%;
+  height: 1.2em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loading-placeholder {
+    animation: none;
+    background: #e8e8e8;
+  }
+  
+  .content-loaded .experience-list,
+  .content-loaded .education-list,
+  .content-loaded .technical-skills dl,
+  .content-loaded .key-projects dl,
+  .content-loaded .header-summary p,
+  .header,
+  .main,
+  .sidebar,
+  .experience-position,
+  .profile-image {
+    animation: none;
+  }
+  
+  a:hover,
+  .sidebar a:hover,
+  .profile-image:hover {
+    transform: none;
+    animation: none;
+    box-shadow: none;
+  }
+  
+  .sidebar a::before {
+    transition: none;
   }
 }
