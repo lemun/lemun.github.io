@@ -5,6 +5,19 @@
   font-display: swap;
 }
 
+/* Screen reader only content */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 html {
   margin: 0;
   padding: 0;
@@ -26,8 +39,7 @@ a {
 }
 
 dl {
-  margin: 0;
-  margin-bottom: -0.5rem;
+  margin: 0 0 -0.5rem 0;
 }
 
 ul {
@@ -81,7 +93,6 @@ li {
 .sidebar a:hover {
   text-decoration: underline;
 }
-
 
 .main {
   flex: 0 1 65vw;
@@ -153,7 +164,6 @@ li {
 .header-contact a:hover {
   text-decoration: underline;
 }
-
 
 .profile-image {
   height: 5rem;
@@ -272,8 +282,7 @@ li {
 .sub-list {
   list-style: circle;
   padding-left: 1rem;
-  margin-left: 1rem;
-  margin-top: 0.5rem;
+  margin: 0.5rem 0 0 1rem;
   font-size: 0.85rem;
   line-height: 1.15rem;
 }
@@ -288,8 +297,7 @@ li {
 .education-title {
   font-weight: 400;
   font-size: 1.25rem;
-  margin-right: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin: 0 0.5rem 0.5rem 0;
 }
 
 .education-degree {
@@ -297,13 +305,10 @@ li {
 }
 
 .education .education-list {
-  margin: 0;
-  padding: 0;
+  margin: 0 0 0 1rem;
+  padding: 0 0 0 1rem;
   list-style: circle;
-  padding-left: 1rem;
-  margin-left: 1rem;
 }
-
 
 @media (max-width: 925px) {
   .header-summary {
@@ -350,7 +355,6 @@ li {
     font-size: 1.1rem;
   }
 
-  /* Mobile: left-align header contact info */
   .header {
     justify-content: flex-start;
   }
@@ -379,7 +383,7 @@ li {
   }
 
   .experience-title {
-    margin-top: 0.25rem;
+    margin-top: 0.05rem;
   }
 
   .experience {
@@ -388,8 +392,7 @@ li {
 
   .education {
     margin: 0;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding: 1rem 0.5rem;
   }
 
   .technical-skills {

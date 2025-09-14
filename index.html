@@ -2,35 +2,141 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" type="text/css" href="./assets/css/styles.css" />
-  <meta name="description" content="Resume site for Shai Sinai">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shai Sinai: Resume</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary Meta Tags -->
+  <title>Shai Sinai - QA Automation Engineer | TypeScript, Appium, React Native</title>
+  <meta name="title" content="Shai Sinai - QA Automation Engineer | TypeScript, Appium, React Native">
+  <meta name="description" content="Experienced QA Automation Engineer specializing in TypeScript, Appium, Detox, and React Native. Expert in building maintainable automation frameworks, CI/CD pipelines, and E2E testing solutions.">
+  <meta name="keywords" content="QA Automation Engineer, TypeScript, Appium, Detox, React Native, E2E Testing, CI/CD, Azure DevOps, Puppeteer, WebDriverIO, Test Automation, Software Testing">
+  <meta name="author" content="Shai Sinai">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://shaisinai.com/">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://shaisinai.com/">
+  <meta property="og:title" content="Shai Sinai - QA Automation Engineer | TypeScript, Appium, React Native">
+  <meta property="og:description" content="Experienced QA Automation Engineer specializing in TypeScript, Appium, Detox, and React Native. Expert in building maintainable automation frameworks, CI/CD pipelines, and E2E testing solutions.">
+  <meta property="og:image" content="https://shaisinai.com/assets/images/profile-90.webp">
+  <meta property="og:image:width" content="90">
+  <meta property="og:image:height" content="90">
+  <meta property="og:image:alt" content="Photo of Shai Sinai">
+  <meta property="og:site_name" content="Shai Sinai - Portfolio">
+  <meta property="og:locale" content="en_US">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary">
+  <meta property="twitter:url" content="https://shaisinai.com/">
+  <meta property="twitter:title" content="Shai Sinai - QA Automation Engineer | TypeScript, Appium, React Native">
+  <meta property="twitter:description" content="Experienced QA Automation Engineer specializing in TypeScript, Appium, Detox, and React Native. Expert in building maintainable automation frameworks, CI/CD pipelines, and E2E testing solutions.">
+  <meta property="twitter:image" content="https://shaisinai.com/assets/images/profile-90.webp">
+  <meta property="twitter:image:alt" content="Photo of Shai Sinai">
   
   <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
   
-  <!-- Preconnect to Google Analytics -->
+  <!-- Preconnect for performance -->
   <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  
+  <!-- Preload critical resources -->
+  <link rel="preload" href="assets/css/styles.css" as="style">
+  <link rel="preload" href="assets/images/profile-90.webp" as="image">
+  <link rel="preload" href="assets/js/script.js" as="script">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+  
+  <!-- Scripts -->
+  <script src="assets/js/script.js" defer></script>
+  
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Shai Sinai",
+    "jobTitle": "QA Automation Engineer",
+    "description": "Experienced QA Automation Engineer specializing in TypeScript, Appium, Detox, and React Native. Expert in building maintainable automation frameworks, CI/CD pipelines, and E2E testing solutions.",
+    "url": "https://shaisinai.com",
+    "image": "https://shaisinai.com/assets/images/profile-90.webp",
+    "email": "shaisinai4@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Tel Aviv",
+      "addressCountry": "Israel"
+    },
+    "sameAs": [
+      "https://github.com/lemun",
+      "https://linkedin.com/in/shaisinai"
+    ],
+    "knowsAbout": [
+      "QA Automation",
+      "TypeScript",
+      "JavaScript",
+      "Appium",
+      "Detox",
+      "React Native",
+      "React",
+      "Node.js",
+      "Puppeteer",
+      "WebDriverIO",
+      "CI/CD",
+      "Azure DevOps",
+      "Test Automation",
+      "E2E Testing",
+      "MongoDB",
+      "Oracle SQL"
+    ],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Matzpen Unit, IDF"
+    }
+  }
+  </script>
+  
+  <!-- Organization Schema for work experience -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Shai Sinai - Portfolio",
+    "description": "Professional portfolio and resume of Shai Sinai, QA Automation Engineer",
+    "url": "https://shaisinai.com",
+    "author": {
+      "@type": "Person",
+      "name": "Shai Sinai"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://shaisinai.com/?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
 </head>
 
 <body class="layout">
-  <main class="main">
+  <main class="main" role="main">
     <header class="header">
         <picture class="profile-image">
           <source type="image/webp" srcset="assets/images/profile-45.webp 45w, assets/images/profile-90.webp 90w" sizes="(max-width: 725px) 45px, 90px">
-          <img alt="Photo of Shai Sinai" class="profile-image" src="assets/images/profile-45.webp" width="90" height="90">
+          <img alt="Professional headshot of Shai Sinai, QA Automation Engineer" class="profile-image" src="assets/images/profile-45.webp" width="90" height="90">
         </picture>
       <section class="header-name-and-title">
-        <div class="header-name">Shai Sinai</div>
-        <div class="header-title">QA Automation Engineer</div>
+        <h1 class="header-name">Shai Sinai</h1>
+        <h2 class="header-title">QA Automation Engineer</h2>
       </section>
       <section class="header-summary">
-        <div>Building <strong>maintainable automation</strong></div>
+        <p>Building <strong>maintainable automation frameworks</strong> with <strong>TypeScript</strong>, <strong>Appium</strong>, and <strong>React Native</strong></p>
       </section>
       <section class="header-contact">
-        <!-- Content synced via script.js -->
         <ul class="header-contact-list">
           <li data-test-location="header" data-test-name="contact-location"></li>
           <li data-test-location="header" data-test-name="contact-email"></li>
@@ -40,15 +146,16 @@
         </ul>
       </section>
     </header>
-    <section class="experience">
+    <section class="experience" aria-label="Professional Experience">
+      <h2 class="sr-only">Professional Experience</h2>
       <ul class="experience-list">
         <li class="experience-position">
           <div class="experience-header">
-            <div class="experience-company">
+            <h3 class="experience-company">
               Matzpen Unit, IDF
-            </div>
+            </h3>
             <div class="experience-title">QA Automation Engineer</div>
-            <time>Jul 2024 - Present</time>
+            <time datetime="2024-07">Jul 2024 - Present</time>
           </div>
           <ul class="sub-list">
             <li>
@@ -71,11 +178,11 @@
         </li>
         <li class="experience-position">
           <div class="experience-header">
-            <div class="experience-company">
+            <h3 class="experience-company">
               Hatal Unit, IDF
-            </div>
+            </h3>
             <div class="experience-title">QA Automation Engineer</div>
-            <time>Jul 2023 - Jul 2024</time>
+            <time datetime="2023-07/2024-07">Jul 2023 - Jul 2024</time>
           </div>
           <ul class="sub-list">
             <li>
@@ -91,11 +198,11 @@
         </li>
         <li class="experience-position">
           <div class="experience-header">
-            <div class="experience-company">
+            <h3 class="experience-company">
               E-Commerce Business (Self-Employed)
-            </div>
+            </h3>
             <div class="experience-title">Founder & Developer</div>
-            <time>Oct 2022 - Mar 2024</time>
+            <time datetime="2022-10/2024-03">Oct 2022 - Mar 2024</time>
           </div>
           <ul class="sub-list">
             <li>
@@ -113,11 +220,11 @@
         </li>
         <li class="experience-position">
           <div class="experience-header">
-            <div class="experience-company">
+            <h3 class="experience-company">
               ClickIt
-            </div>
+            </h3>
             <div class="experience-title">SEO Specialist & Analyst</div>
-            <time>Apr 2019 - Jun 2023</time>
+            <time datetime="2019-04/2023-06">Apr 2019 - Jun 2023</time>
           </div>
           <ul class="sub-list">
             <li>
@@ -131,19 +238,20 @@
         </li>
       </ul>
       <footer class="education">
-        <div class="education-title">
-          Education
-        </div>
+        <h2 class="education-title">
+          Education & Certifications
+        </h2>
         <ul class="education-list">
-          <li>Node.js, Express & MongoDB Certification – The External Studies Institute (Sep 2025)</li>
-          <li>ReactJS Development Certification – The External Studies Institute (Jan 2025)</li>
-          <li>QA Manual & Automation Certification – Basmach IDF School of Computer Science (Jun 2023)</li>
+          <li><strong>Node.js, Express & MongoDB Certification</strong> – The External Studies Institute (<time datetime="2025-09">Sep 2025</time>)</li>
+          <li><strong>ReactJS Development Certification</strong> – The External Studies Institute (<time datetime="2025-01">Jan 2025</time>)</li>
+          <li><strong>QA Manual & Automation Certification</strong> – Basmach IDF School of Computer Science (<time datetime="2023-06">Jun 2023</time>)</li>
         </ul>
       </footer>
     </section>
   </main>
-  <aside class="sidebar">
-    <section class="sidebar-contact">
+  <aside class="sidebar" role="complementary">
+    <section class="sidebar-contact" aria-label="Contact Information">
+      <h2 class="sr-only">Contact Information</h2>
       <ul class="sidebar-contact-list">
         <li data-test-location="sidebar" data-test-name="contact-location">
           <svg class="icon" viewBox="0 0 24 24">
@@ -162,12 +270,12 @@
           </a>
         </li>
         <li data-test-location="sidebar" data-test-name="contact-github">
-          <a href="https://github.com/shaisinai">
+          <a href="https://github.com/lemun">
             <svg class="icon" viewBox="0 0 24 24">
               <path fill="currentColor"
                 d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
             </svg>
-            <span>github.com/shaisinai</span>
+            <span>github.com/lemun</span>
           </a>
         </li>
         <li data-test-location="sidebar" data-test-name="contact-linkedin">
@@ -180,7 +288,7 @@
           </a>
         </li>
         <li data-test-location="sidebar" data-test-name="contact-pdf">
-            <a href="assets/docs/resume.pdf" title="Download resume">
+          <a href="assets/docs/resume.pdf" title="Download resume">
             <svg class="icon" viewBox="0 0 24 24">
               <path fill="currentColor"
                 d="M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10 10-4.49 10-10S17.51 2 12 2m-1 8V6h2v4h3l-4 4-4-4zm6 7H7v-2h10z">
@@ -192,8 +300,8 @@
       </ul>
     </section>
 
-    <section class="technical-skills">
-      <div class="sidebar-header">Technical Skills</div>
+    <section class="technical-skills" aria-label="Technical Skills">
+      <h2 class="sidebar-header">Technical Skills</h2>
       <dl>
         <dt>Automation & Testing</dt>
         <dd>Appium, Detox, Puppeteer, WebDriverIO</dd>
@@ -215,8 +323,8 @@
       </dl>
     </section>
 
-    <section class="key-projects">
-      <div class="sidebar-header">Public Projects</div>
+    <section class="key-projects" aria-label="Public Projects">
+      <h2 class="sidebar-header">Public Projects</h2>
       <dl>
         <dt>
           <a href="https://github.com/lemun/appium-react-native-boilerplate"><span
@@ -232,8 +340,6 @@
       </dl>
     </section>
   </aside>
-
-    <script src="assets/js/script.js" type="text/JavaScript"></script>
 
   <!-- Google Analytics loaded after page content -->
   <script>
