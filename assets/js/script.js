@@ -194,6 +194,16 @@ async function initPortfolioContent() {
       buildEducationSection(data);
       buildSkillsSection(data);
       buildProjectsSection(data);
+      // After contact info is synced, mirror location text under the title for mobile
+      try {
+        const mobileLocation = getElement('.header-location-mobile');
+        const headerLocation = getElement('[data-test-location="header"][data-test-name="contact-location"] span');
+        if (mobileLocation && headerLocation) {
+          mobileLocation.textContent = headerLocation.textContent || '';
+        }
+      } catch (e) {
+        console.warn('Failed to set mobile header location:', e);
+      }
       
       document.body.classList.add('content-loaded');
       

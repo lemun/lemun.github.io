@@ -153,6 +153,10 @@ li {
   font-style: italic;
 }
 
+.header-summary p {
+  margin: 0;
+}
+
 .header-contact {
   display: none;
   font-size: 0.9rem;
@@ -215,13 +219,18 @@ li {
   flex-grow: 1;
   font-size: 1.5rem;
   font-weight: 600;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.1rem;
   white-space: nowrap;
 }
 
 .header-title {
   font-size: 1.25rem;
+  margin-top: 0;
   white-space: nowrap;
+}
+
+.header-location-mobile {
+  display: none;
 }
 
 .experience {
@@ -350,7 +359,7 @@ li {
 @media (max-width: 925px) {
   .header-summary {
     text-align: left;
-    margin-top: 0.5rem;
+    margin-top: 0.2rem;
   }
 }
 
@@ -381,8 +390,8 @@ li {
   }
 
   .profile-image {
-    height: 3rem;
-    width: 3rem;
+    height: 3.5rem;
+    width: 3.5rem;
   }
 
   .header-name {
@@ -391,6 +400,7 @@ li {
 
   .header-title {
     font-size: 1.1rem;
+    margin-bottom: 0;
   }
 
   .header {
@@ -401,6 +411,13 @@ li {
     width: 100%;
   }
 
+  /* Reorder header blocks: name/title -> contact -> summary */
+  .header-name-and-title { order: 1; }
+  .header-contact { order: 2; }
+  .header-summary { order: 3; width: 100%; }
+  /* Hide summary on mobile */
+  .header-summary { display: none; }
+
   .header-contact-list li,
   .header-contact-list li a {
     justify-content: flex-start;
@@ -409,19 +426,58 @@ li {
 
   .header-contact-list {
     text-align: left;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 0.75rem;
+    row-gap: 0.4rem;
+  }
+
+  /* Hide location from the grid on mobile; it will appear under the title */
+  .header-contact-list [data-test-name="contact-location"] {
+    display: none;
   }
 
   .header-contact-list li {
     white-space: normal;
+    margin: 0;
+  }
+
+  .header-contact-list li,
+  .header-contact-list li a {
+    display: inline-flex;
+    min-height: auto;
+    padding: 0.25rem 0.25rem;
+    margin: 0;
+  }
+
+  .header-location-mobile {
+    display: block;
+    font-size: 0.9rem;
+    color: #000;
+    margin-top: 0.1rem;
   }
 
   .experience-header {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: baseline;
+    flex-wrap: wrap;
   }
 
   .experience-title {
-    margin-top: 0.05rem;
+    margin-top: 0;
+    flex-basis: 100%;
+    order: 3;
+  }
+
+  .experience-company {
+    margin: 0 0.25rem 0 0;
+    order: 1;
+  }
+
+  .experience-header time {
+    order: 2;
+    margin-left: auto;
+    font-size: 0.9rem;
   }
 
   .experience {
@@ -433,12 +489,37 @@ li {
     padding: 1rem 0.5rem;
   }
 
+  /* Mobile spacing for Education & Certifications */
+  .education-title {
+    margin-bottom: 0.75rem;
+  }
+
+  .education .education-list li {
+    margin-bottom: 0.6rem;
+    line-height: 1.35rem;
+  }
+
   .technical-skills {
     margin-top: 0;
   }
 
+  /* Make Technical Skills title bold on mobile */
+  .technical-skills .sidebar-header {
+    font-weight: 400;
+  }
+
+  /* Make nested technical skills headings bold on mobile */
+  .technical-skills dt {
+    font-weight: 700;
+  }
+
   .experience-position {
     margin-bottom: 0.75rem;
+  }
+
+  /* Add more space before job description under title */
+  .experience-position .sub-list {
+    margin-top: 1rem;
   }
 }
 
