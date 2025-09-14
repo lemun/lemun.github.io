@@ -191,17 +191,14 @@ async function initPortfolioContent() {
     requestAnimationFrame(() => {
       buildHeaderSummary(data);
       buildExperienceSection(data);
+      buildEducationSection(data);
+      buildSkillsSection(data);
+      buildProjectsSection(data);
       
-      requestIdleCallback(() => {
-        buildEducationSection(data);
-        buildSkillsSection(data);
-        buildProjectsSection(data);
-        
-        document.body.classList.add('content-loaded');
-        
-        const endTime = performance.now();
-        console.debug(`Portfolio content loaded in ${(endTime - startTime).toFixed(2)}ms`);
-      }, { timeout: 2000 });
+      document.body.classList.add('content-loaded');
+      
+      const endTime = performance.now();
+      console.debug(`Portfolio content loaded in ${(endTime - startTime).toFixed(2)}ms`);
     });
     
   } catch (error) {
