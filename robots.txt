@@ -1,8 +1,12 @@
 User-agent: *
 Allow: /
-Allow: /assets/
-Allow: /assets/images/
-Allow: /assets/docs/resume.pdf
+
+# Allow all major search engines full access
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
 
 # Disallow crawling of scripts and CSS for non-essential bots
 User-agent: AhrefsBot
@@ -12,13 +16,6 @@ Disallow: /assets/css/
 User-agent: SemrushBot
 Disallow: /assets/js/
 Disallow: /assets/css/
-
-# Allow Google and Bing full access
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
 
 # Crawl delay for other bots
 Crawl-delay: 1

@@ -1,0 +1,102 @@
+{
+  "personal": {
+    "name": "Shai Sinai",
+    "title": "QA Automation Engineer",
+    "summary": "Building <strong>maintainable automation frameworks</strong> with <strong>TypeScript</strong>, <strong>Appium</strong>, and <strong>React Native</strong>",
+    "location": "Tel Aviv, Israel",
+    "email": "shaisinai4@gmail.com",
+    "github": "https://github.com/lemun",
+    "linkedin": "https://linkedin.com/in/shaisinai",
+    "resume_pdf": "assets/docs/resume.pdf"
+  },
+  "experience": [
+    {
+      "company": "Matzpen Unit, IDF",
+      "title": "QA Automation Engineer",
+      "period": "Jul 2024 - Present",
+      "startDate": "2024-07",
+      "highlights": [
+        "Built and maintained an E2E automation project in <strong>TypeScript</strong> with <strong>Appium</strong> & <strong>Detox</strong>",
+        "Contributed to <strong>React Native app</strong> with bug fixes & minor features",
+        "Managed and integrated <strong>CI/CD pipelines</strong> and agent pools in <strong>Azure DevOps</strong>",
+        "Validated backend APIs with <strong>Postman</strong> + <strong>Oracle SQL</strong>",
+        "Partnered with developers & PMs to refine user stories and improve testability"
+      ]
+    },
+    {
+      "company": "Hatal Unit, IDF",
+      "title": "QA Automation Engineer",
+      "period": "Jul 2023 - Jul 2024",
+      "startDate": "2023-07",
+      "endDate": "2024-07",
+      "highlights": [
+        "Initiated and led development of a <strong>web automation framework (Puppeteer + JavaScript)</strong>",
+        "Decreased test flakiness by <strong>80%</strong>, improving automation reliability",
+        "Guided teammates technically and developed <strong>onboarding documentation</strong>"
+      ]
+    },
+    {
+      "company": "E-Commerce Business (Self-Employed)",
+      "title": "Founder & Developer",
+      "period": "Oct 2022 - Mar 2024",
+      "startDate": "2022-10",
+      "endDate": "2024-03",
+      "highlights": [
+        "Designed and migrated platform <strong>(Shopify -> WooCommerce)</strong> with <strong>full-stack integrations</strong>",
+        "Automated order fulfillment & support workflows, reducing manual work by <strong>85%</strong>",
+        "Generated <strong>₪200,000+ in one year</strong> through <strong>SEO, campaigns,</strong> and <strong>technical optimization</strong>"
+      ]
+    },
+    {
+      "company": "ClickIt",
+      "title": "SEO Specialist & Analyst",
+      "period": "Apr 2019 - Jun 2023",
+      "startDate": "2019-04",
+      "endDate": "2023-06",
+      "highlights": [
+        "Managed multi-client <strong>Google AdWords campaigns (₪15,000+ monthly budgets)</strong>",
+        "Developed <strong>SEO dashboards</strong> & complex <strong>keyword datasets</strong> in <strong>Excel</strong>"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "name": "Node.js, Express & MongoDB Certification",
+      "issuer": "The External Studies Institute",
+      "date": "Sep 2025",
+      "dateTime": "2025-09"
+    },
+    {
+      "name": "ReactJS Development Certification",
+      "issuer": "The External Studies Institute", 
+      "date": "Jan 2025",
+      "dateTime": "2025-01"
+    },
+    {
+      "name": "QA Manual & Automation Certification",
+      "issuer": "Basmach IDF School of Computer Science",
+      "date": "Jun 2023",
+      "dateTime": "2023-06"
+    }
+  ],
+  "technicalSkills": {
+    "Automation & Testing": "Appium, Detox, Puppeteer, WebDriverIO",
+    "Programming Languages": "TypeScript, JavaScript, SQL, Java",
+    "Development Frameworks": "React Native, React, Express.js, Node.js",
+    "AI & Development Tools": "Cursor, Claude, OpenAI API, GitHub Copilot",
+    "CI/CD & DevOps": "Git, Azure DevOps, Pipelines, Docker",
+    "Databases": "MongoDB, Oracle SQL, Postman API Testing"
+  },
+  "projects": [
+    {
+      "name": "appium-react-native-boilerplate",
+      "url": "https://github.com/lemun/appium-react-native-boilerplate",
+      "description": "WebDriverIO & Appium boilerplate with utility modules (biometrics, MongoDB, etc.)"
+    },
+    {
+      "name": "detox-e2e-showcase", 
+      "url": "https://github.com/lemun/detox-e2e-showcase",
+      "description": "Cross-platform automation architecture with reusable flows system & modular POM"
+    }
+  ]
+}
