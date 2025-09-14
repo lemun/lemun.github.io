@@ -465,15 +465,16 @@ li {
   display: none;
 }
 
-.header {
+/* Run non-essential animations only after main content is ready */
+.content-loaded .header {
   animation: fadeIn 0.6s ease-out;
 }
 
-.main {
+.content-loaded .main {
   animation: fadeIn 0.8s ease-out 0.1s both;
 }
 
-.sidebar {
+.content-loaded .sidebar {
   animation: fadeIn 0.8s ease-out 0.2s both;
 }
 
@@ -485,7 +486,7 @@ li {
   animation: fadeIn 0.4s ease-out;
 }
 
-.experience-position {
+.content-loaded .experience-position {
   animation: fadeInUp 0.5s ease-out both;
 }
 

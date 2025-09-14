@@ -38,8 +38,9 @@
   <link rel="dns-prefetch" href="https://www.googletagmanager.com">
   
   <link rel="preload" href="assets/css/styles.css" as="style">
-  <link rel="preload" href="assets/images/profile-90.webp" as="image">
+  <link rel="preload" as="image" href="assets/images/profile-90.webp" imagesrcset="assets/images/profile-45.webp 45w, assets/images/profile-90.webp 90w" imagesizes="(max-width: 725px) 45px, 90px">
   <link rel="preload" href="assets/js/script.js" as="script">
+  <link rel="preload" href="data.json" as="fetch" type="application/json" crossorigin>
   
   <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
   
@@ -117,14 +118,14 @@
     <header class="header">
         <picture class="profile-image">
           <source type="image/webp" srcset="assets/images/profile-45.webp 45w, assets/images/profile-90.webp 90w" sizes="(max-width: 725px) 45px, 90px">
-          <img alt="Professional headshot of Shai Sinai, QA Automation Engineer" class="profile-image" src="assets/images/profile-45.webp" width="90" height="90">
+          <img alt="Professional headshot of Shai Sinai, QA Automation Engineer" class="profile-image" src="assets/images/profile-45.webp" width="90" height="90" fetchpriority="high" decoding="async" loading="eager">
         </picture>
       <section class="header-name-and-title">
         <h1 class="header-name">Shai Sinai</h1>
         <h2 class="header-title">QA Automation Engineer</h2>
       </section>
       <section class="header-summary">
-        <p class="loading-placeholder">Loading summary...</p>
+        <p>Building <strong>maintainable automation frameworks</strong> with <strong>TypeScript</strong>, <strong>Appium</strong>, and <strong>React Native</strong></p>
       </section>
       <section class="header-contact">
         <ul class="header-contact-list">
