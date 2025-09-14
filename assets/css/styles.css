@@ -1,13 +1,27 @@
 * {
-  font-family: sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   font-weight: 300;
   box-sizing: border-box;
+  font-display: swap;
+}
+
+/* Screen reader only content */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 html {
   margin: 0;
   padding: 0;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 body {
@@ -25,8 +39,7 @@ a {
 }
 
 dl {
-  margin: 0;
-  margin-bottom: -0.5rem;
+  margin: 0 0 -0.5rem 0;
 }
 
 ul {
@@ -34,6 +47,7 @@ ul {
   padding: 0;
   list-style: none;
 }
+
 li {
   padding: 0;
 }
@@ -75,37 +89,9 @@ li {
   text-decoration: none;
   font-weight: 100;
 }
+
 .sidebar a:hover {
   text-decoration: underline;
-}
-
-.oss-projects {
-  flex: 0 1 auto;
-  justify-content: flex-end;
-  overflow: auto;
-}
-
-.oss-projects dd {
-  font-size: 0.8rem;
-  margin-left: 1rem;
-  margin-bottom: 0.5rem;
-}
-
-.certifications {
-  margin-bottom: 2rem;
-}
-
-.certification-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.certification-list li {
-  font-size: 0.8rem;
-  margin-bottom: 0.5rem;
-  line-height: 1.2;
-  padding-left: 0;
 }
 
 .main {
@@ -149,10 +135,12 @@ li {
 .header-contact-list {
   padding: 0;
 }
+
 .header-contact-list li {
   margin-bottom: 0.25em;
   white-space: nowrap;
 }
+
 .header-contact-list li,
 .header-contact-list li a {
   display: flex;
@@ -160,7 +148,11 @@ li {
   align-items: center;
   justify-content: flex-end;
   gap: 0.5rem;
+  min-height: 44px;
+  padding: 4px 8px;
+  margin: -4px -8px;
 }
+
 .header-contact-list li:last-of-type {
   margin-bottom: 0;
 }
@@ -168,27 +160,9 @@ li {
 .header-contact a {
   text-decoration: none;
 }
+
 .header-contact a:hover {
   text-decoration: underline;
-}
-
-.download-link {
-  color: #53515c;
-  text-decoration: none;
-  font-size: 0.85rem;
-  display: flex;
-  align-items: center;
-  gap: 0.125rem;
-}
-.download-link:hover {
-  color: #434248;
-  text-decoration: underline;
-}
-
-.download-icon {
-  width: 1rem;
-  height: 1rem;
-  fill: currentColor;
 }
 
 .profile-image {
@@ -207,6 +181,7 @@ li {
   margin-bottom: 0.25rem;
   white-space: nowrap;
 }
+
 .header-title {
   font-size: 1.25rem;
   white-space: nowrap;
@@ -235,7 +210,7 @@ li {
 
 .technical-skills dd,
 .key-projects dd {
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   margin-left: 1rem;
   margin-bottom: 0.5rem;
 }
@@ -247,21 +222,25 @@ li {
 .sidebar-contact-list {
   background-color: #53515c;
   padding: 0.5rem;
-}
-.sidebar-contact-list {
   border-radius: 0.25rem;
 }
+
 .sidebar-contact-list li {
   margin-bottom: 0.25rem;
   white-space: nowrap;
 }
+
 .sidebar-contact-list li,
 .sidebar-contact-list li a {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 0.5rem;
+  min-height: 44px;
+  padding: 4px 8px;
+  margin: -4px -8px;
 }
+
 .sidebar-contact-list li:last-of-type {
   margin-bottom: 0;
 }
@@ -271,6 +250,7 @@ li {
   padding: 0.25rem 0.75rem;
   border-bottom: 1px solid #eee;
 }
+
 .experience-position:last-of-type {
   border-bottom: none;
 }
@@ -290,6 +270,7 @@ li {
 .experience-company a {
   text-decoration: none;
 }
+
 .experience-company a:hover {
   text-decoration: underline;
 }
@@ -301,8 +282,7 @@ li {
 .sub-list {
   list-style: circle;
   padding-left: 1rem;
-  margin-left: 1rem;
-  margin-top: 0.5rem;
+  margin: 0.5rem 0 0 1rem;
   font-size: 0.85rem;
   line-height: 1.15rem;
 }
@@ -313,28 +293,21 @@ li {
   padding: 0.5rem;
   margin-top: 0.5rem;
 }
+
 .education-title {
   font-weight: 400;
   font-size: 1.25rem;
-  margin-right: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin: 0 0.5rem 0.5rem 0;
 }
+
 .education-degree {
   font-size: 1rem;
 }
 
 .education .education-list {
-  margin: 0;
-  padding: 0;
+  margin: 0 0 0 1rem;
+  padding: 0 0 0 1rem;
   list-style: circle;
-  padding-left: 1rem;
-  margin-left: 1rem;
-}
-
-.education .certification-list li {
-  font-size: 0.85rem;
-  margin-bottom: 0.25rem;
-  line-height: 1.15rem;
 }
 
 @media (max-width: 925px) {
@@ -344,6 +317,10 @@ li {
 }
 
 @media (max-width: 725px) {
+  html {
+    font-size: 18px;
+  }
+
   .layout {
     flex-direction: column;
     height: auto;
@@ -371,28 +348,31 @@ li {
   }
 
   .header-name {
-    font-size: 1.25rem;
+    font-size: 1.35rem;
   }
 
   .header-title {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
-  /* Mobile: left-align header contact info */
   .header {
     justify-content: flex-start;
   }
+
   .header-contact {
     width: 100%;
   }
+
   .header-contact-list li,
   .header-contact-list li a {
     justify-content: flex-start;
     text-align: left;
   }
+
   .header-contact-list {
     text-align: left;
   }
+
   .header-contact-list li {
     white-space: normal;
   }
@@ -401,8 +381,9 @@ li {
     flex-direction: column;
     align-items: flex-start;
   }
+
   .experience-title {
-    margin-top: 0.25rem;
+    margin-top: 0.05rem;
   }
 
   .experience {
@@ -411,9 +392,9 @@ li {
 
   .education {
     margin: 0;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding: 1rem 0.5rem;
   }
+
   .technical-skills {
     margin-top: 0;
   }
@@ -421,7 +402,4 @@ li {
   .experience-position {
     margin-bottom: 0.75rem;
   }
-}
-
-@media print {
 }

@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://shaisinai.com/</loc>
-    <lastmod>2025-09-10</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2025-09-14T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://shaisinai.com/assets/images/profile-90.webp</image:loc>
+      <image:caption>Professional headshot of Shai Sinai, QA Automation Engineer</image:caption>
+      <image:title>Shai Sinai Profile Photo</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://shaisinai.com/resume.pdf</loc>
-    <lastmod>2025-09-10</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://shaisinai.com/assets/docs/resume.pdf</loc>
+    <lastmod>2025-09-14T00:00:00+00:00</lastmod>
+    <changefreq>quarterly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
 
