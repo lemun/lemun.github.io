@@ -6,7 +6,7 @@ RewriteEngine On
 # Handle shai-sinai-resume.pdf requests with role parameter
 RewriteCond %{REQUEST_FILENAME} shai-sinai-resume\.pdf$
 RewriteCond %{QUERY_STRING} role=ai-automation
-RewriteRule ^(.*)$ shai-sinai-resume-ai-automation.pdf [L]
+RewriteRule ^(.*)$ shai-sinai-resume-ai-automation-resume.pdf [L]
 
 # Default case - serve regular shai-sinai-resume.pdf if no matching role
 # (This happens automatically, no rule needed)
