@@ -194,7 +194,6 @@ async function initPortfolioContent() {
       buildEducationSection(data);
       buildSkillsSection(data);
       buildProjectsSection(data);
-      // After contact info is synced, mirror location text under the title for mobile
       try {
         const mobileLocation = getElement('.header-location-mobile');
         const headerLocation = getElement('[data-test-location="header"][data-test-name="contact-location"] span');
@@ -213,9 +212,22 @@ async function initPortfolioContent() {
     
   } catch (error) {
     console.error('Failed to load dynamic content:', error.message);
-    // Fallback: still show content-loaded class to hide loading placeholders
     document.body.classList.add('content-loaded');
   }
+}
+
+function updateResumeLinks() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const roleParam = urlParams.get('role');
+  
+  const resumeLinks = document.querySelectorAll('[data-test-name="contact-pdf"] a');
+  resumeLinks.forEach(link => {
+    if (roleParam) {
+      link.href = `resume?role=${roleParam}`;
+    } else {
+      link.href = 'resume';
+    }
+  });
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -223,6 +235,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   
   requestAnimationFrame(() => {
     contactTypes.forEach(syncContactInfo);
+    updateResumeLinks();
   });
 
   await initPortfolioContent();

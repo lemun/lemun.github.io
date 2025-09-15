@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Resume Download</title>
+    <script>
+        const RESUME_CONFIG = {
+            'ai-automation': 'shai-sinai-resume-ai-automation.pdf'
+            // TODO: Add other resume files here
+        };
+
+        function redirectToCorrectResume() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const roleParam = urlParams.get('role');
+            
+            let resumeFile = 'shai-sinai-resume.pdf';
+            
+            if (roleParam && RESUME_CONFIG[roleParam]) {
+                resumeFile = RESUME_CONFIG[roleParam];
+            }
+            
+            window.location.href = '../assets/docs/' + resumeFile;
+        }
+
+        redirectToCorrectResume();
+    </script>
+</head>
+<body>
+    <p>Redirecting to resume...</p>
+</body>
+</html>

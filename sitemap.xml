@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://shaisinai.com/</loc>
-    <lastmod>2025-09-14T00:00:00+00:00</lastmod>
+    <lastmod>2025-09-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -13,10 +13,22 @@
     </image:image>
   </url>
   <url>
-    <loc>https://shaisinai.com/assets/docs/resume.pdf</loc>
-    <lastmod>2025-09-14T00:00:00+00:00</lastmod>
+    <loc>https://shaisinai.com/resume</loc>
+    <lastmod>2025-09-15T00:00:00+00:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://shaisinai.com/assets/docs/shai-sinai-resume.pdf</loc>
+    <lastmod>2025-09-15T00:00:00+00:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+    <url>
+    <loc>https://shaisinai.com/assets/docs/shai-sinai-resume-ai-automation.pdf</loc>
+    <lastmod>2025-09-15T00:00:00+00:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>
 
